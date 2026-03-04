@@ -1,20 +1,16 @@
-import { useSelector } from "react-redux";
-
+import React from 'react'
+import './Footer.css'
 
 const Footer = () => {
-    const theme = useSelector(state => state.ui.theme)
-
-    return(
-        <footer style={{
-            padding: "20px",
-            background: theme === 'light'? "#eee": "#333",
-            color: theme === 'light' ? "#000": "#fff",
-        }}>
-
-            <p>2026 Мой сайт на REDUX</p>
-
-        </footer>
-    )
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footerBottom">
+          <p className="copyright">© 2024 CarShare. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+  )
 }
 
 export default Footer

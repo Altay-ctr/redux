@@ -1,0 +1,59 @@
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main {
+    flex: 1;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .heroTitle {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #ffd700;
+  }
+  
+  .heroSubtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .heroButtons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .primaryBtn {
+    background: #ffd700;
+    color: #333;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+  }
+  
+  .secondaryBtn {
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: 2px solid white;
+  }

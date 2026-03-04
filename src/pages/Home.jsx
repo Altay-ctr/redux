@@ -1,26 +1,31 @@
-import { useSelector } from "react-redux";
+import React from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import './Home.css'
 
 const Home = () => {
-  const theme = useSelector(state => state.ui.theme);
-  const { username, age, city } = useSelector(state => state.ui);
-
-  const mainStyle = {
-    padding: "40px",
-    minHeight: "calc(100vh - 160px)",
-    textAlign: "center",
-    background: theme === "light" ? "#fff" : "#222",
-    color: theme === "light" ? "#000" : "#fff",
-    transition: "0.3s"
-  };
-
   return (
-    <main style={mainStyle}>
-      <h2>Главная страница</h2>
-      <p>Имя: {username}</p>
-      <p>Возраст: {age}</p>
-      <p>Город: {city}</p>
-    </main>
-  );
-};
+    <div className="home">
+      <Header />
+      <main className="main">
+        <section className="hero">
+          <div className="container">
+            <h1 className="heroTitle">
+              Каршеринг <span className="highlight">CarShare</span>
+            </h1>
+            <p className="heroSubtitle">
+              Арендуйте автомобиль прямо сейчас
+            </p>
+            <div className="heroButtons">
+              <a href="/cars" className="primaryBtn">Найти автомобиль</a>
+              <a href="/how-it-works" className="secondaryBtn">Как это работает</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  )
+}
 
-export default Home;
+export default Home

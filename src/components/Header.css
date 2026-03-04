@@ -1,0 +1,37 @@
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+}
