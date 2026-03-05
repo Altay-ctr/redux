@@ -1,105 +1,71 @@
 .footer {
-  background: #0a0a0a;
-  color: #ffffff;
-  padding: 60px 0 30px;
-  border-top: 1px solid rgba(255, 215, 0, 0.1);
-  width: 100%;
+  background: #000000;
+  border-top: 2px solid #ffd700;
+  padding: 50px 0 20px;
+  margin-top: auto;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-main {
+.footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
-  margin-bottom: 50px;
-  width: 100%;
+  margin-bottom: 40px;
 }
 
-/* Бренд */
-.logo {
+.footer-logo {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 15px;
 }
 
-.logo-icon {
-  font-size: 32px;
+.footer-logo .logo-icon {
+  font-size: 28px;
   color: #ffd700;
 }
 
-.logo-text {
-  font-size: 24px;
+.footer-logo .logo-text {
+  font-size: 20px;
   font-weight: 700;
-  background: linear-gradient(135deg, #ffffff, #ffd700);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
-.brand-description {
+.footer-description {
   color: #b0b0b0;
   font-size: 14px;
   line-height: 1.6;
-  margin: 0;
 }
 
-/* Заголовки */
 .footer-title {
   color: #ffd700;
   font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 20px 0;
-  position: relative;
-  padding-bottom: 8px;
+  margin-bottom: 20px;
 }
 
-.footer-title::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  height: 2px;
-  background: #ffd700;
-}
-
-/* Списки */
-.footer-links {
+.footer-menu {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.footer-links li {
-  margin-bottom: 12px;
+.footer-menu li {
+  margin-bottom: 10px;
 }
 
-.footer-links a {
+.footer-menu a {
   color: #b0b0b0;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-menu a:hover {
   color: #ffd700;
 }
 
-/* Контакты - ИСПРАВЛЕНО */
-.contact-list {
+.footer-contacts {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.contact-list li {
+.footer-contacts li {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -108,27 +74,25 @@
   font-size: 14px;
 }
 
-.contact-icon {
-  font-size: 18px;
-  min-width: 24px;
-  color: #ffd700;
-}
-
-.contact-list a {
+.footer-contacts a {
   color: #b0b0b0;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.contact-list a:hover {
+.footer-contacts a:hover {
   color: #ffd700;
 }
 
-/* Социальные сети - ИСПРАВЛЕНО */
-.social-links {
+.contact-icon {
+  color: #ffd700;
+  font-size: 16px;
+  width: 20px;
+}
+
+.footer-social {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .social-link {
@@ -142,83 +106,48 @@
   color: #ffd700;
 }
 
-/* Нижняя часть */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
+  gap: 15px;
 }
 
 .copyright {
-  color: #666666;
+  color: #666;
   font-size: 14px;
-  margin: 0;
 }
 
 .payment-methods {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .payment-methods span {
-  color: #666666;
-  font-size: 14px;
-  padding: 4px 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
+  color: #666;
+  font-size: 13px;
+  padding: 3px 10px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  border: 1px solid #333;
 }
 
-/* Адаптивность */
 @media (max-width: 992px) {
-  .footer-main {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .footer-main {
+  .footer-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
   }
   
   .footer-bottom {
     flex-direction: column;
-    text-align: center;
-  }
-  
-  .payment-methods {
-    justify-content: center;
-  }
-  
-  .footer-title::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .footer-title {
-    text-align: center;
-  }
-  
-  .footer-links,
-  .social-links {
-    text-align: center;
-  }
-  
-  .contact-list li {
-    justify-content: center;
-  }
-  
-  .logo {
-    justify-content: center;
-  }
-  
-  .brand-description {
     text-align: center;
   }
 }

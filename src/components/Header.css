@@ -1,244 +1,72 @@
 .header {
+  background: #000000;
+  border-bottom: 2px solid #ffd700;
+  padding: 15px 0;
   position: sticky;
   top: 0;
-  width: 100%;
-  background: rgba(18, 18, 18, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 30px;
-  height: 80px;
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logoLink {
+.logo {
   display: flex;
   align-items: center;
-  text-decoration: none;
   gap: 10px;
 }
 
-.logoIcon {
-  font-size: 32px;
+.logo-icon {
+  font-size: 28px;
   color: #ffd700;
-  animation: pulse 2s infinite;
 }
 
-.logoText {
+.logo-text {
   font-size: 24px;
   font-weight: 700;
-  background: linear-gradient(135deg, #fff 0%, #ffd700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 2px;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
-.navList {
+.nav-list {
   display: flex;
   gap: 30px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-.navLink {
-  color: #fff;
+.nav-list a {
+  color: #ffffff;
   text-decoration: none;
   font-size: 16px;
-  font-weight: 500;
-  padding: 8px 0;
-  position: relative;
   transition: color 0.3s ease;
 }
 
-.navLink::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ffd700, #ff6b6b);
-  transition: width 0.3s ease;
-}
-
-.navLink:hover {
+.nav-list a:hover {
   color: #ffd700;
 }
 
-.navLink:hover::before {
-  width: 100%;
-}
-
-/* Профиль */
-.profile-section {
-  position: relative;
-}
-
-.profile-button {
+.profile-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  padding: 5px 15px 5px 5px;
+  gap: 8px;
+  background: #1a1a1a;
+  border: 1px solid #ffd700;
+  border-radius: 30px;
+  padding: 8px 15px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  color: #ffffff;
 }
 
-.profile-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 215, 0, 0.3);
-}
-
-.profile-avatar {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #ffd700, #ff6b6b);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.avatar-icon {
-  font-size: 20px;
-}
-
-.profile-name {
-  color: #fff;
-  font-weight: 500;
-}
-
-.profile-arrow {
-  color: #ffd700;
-  font-size: 12px;
-  transition: transform 0.3s ease;
-}
-
-.profile-button:hover .profile-arrow {
-  transform: translateY(2px);
-}
-
-/* Выпадающее меню */
-.profile-dropdown {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 250px;
-  background: rgba(18, 18, 18, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  animation: slideDown 0.3s ease;
-}
-
-.dropdown-menu {
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-
-.dropdown-item:hover {
-  background: rgba(255, 215, 0, 0.1);
-  color: #ffd700;
-  padding-left: 25px;
-}
-
-.dropdown-divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 8px 0;
-}
-
-.logout {
-  color: #ff6b6b;
-}
-
-.logout:hover {
-  background: rgba(255, 107, 107, 0.1);
-  color: #ff6b6b;
-}
-
-/* Мобильное меню */
-.mobileMenuBtn {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.mobileMenuBtn span {
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #ffd700, #ff6b6b);
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-/* Анимации */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Адаптивность */
-@media (max-width: 992px) {
-  .nav {
-    display: none;
-  }
-  
-  .mobileMenuBtn {
-    display: flex;
-  }
+.profile-btn:hover {
+  background: #ffd700;
+  color: #000000;
 }
 
 @media (max-width: 768px) {
-  .profile-name {
+  .nav {
     display: none;
-  }
-  
-  .profile-button {
-    padding: 5px;
   }
 }

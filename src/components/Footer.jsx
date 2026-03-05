@@ -6,23 +6,23 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer-main">
-          {/* Левая часть с логотипом и описанием */}
-          <div className="footer-brand">
-            <div className="logo">
+      <div className="container footer-container">
+        <div className="footer-grid">
+          {/* Бренд */}
+          <div className="footer-section">
+            <div className="footer-logo">
               <span className="logo-icon">⚡</span>
               <span className="logo-text">CARSHARE</span>
             </div>
-            <p className="brand-description">
-              Премиальный каршеринг в Москве и СПб
+            <p className="footer-description">
+              Премиальный каршеринг в Бишкеке и СНГ
             </p>
           </div>
 
           {/* Навигация */}
-          <div className="footer-nav">
+          <div className="footer-section">
             <h3 className="footer-title">Навигация</h3>
-            <ul className="footer-links">
+            <ul className="footer-menu">
               <li><a href="/">Главная</a></li>
               <li><a href="/cars">Автомобили</a></li>
               <li><a href="/tariffs">Тарифы</a></li>
@@ -30,29 +30,29 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Контакты - ИСПРАВЛЕНО */}
-          <div className="footer-contacts">
+          {/* Контакты */}
+          <div className="footer-section">
             <h3 className="footer-title">Контакты</h3>
-            <ul className="contact-list">
+            <ul className="footer-contacts">
               <li>
                 <span className="contact-icon">📞</span>
-                <a href="tel:88001234567">8 (800) 123-45-67</a>
+                <a href="tel:88001234567">+996 (709) 633 179</a>
               </li>
               <li>
                 <span className="contact-icon">✉️</span>
-                <a href="mailto:info@carshare.ru">info@carshare.ru</a>
+                <a href="mailto:info@carshare.ru">info@carshare.kg</a>
               </li>
               <li>
                 <span className="contact-icon">📍</span>
-                <span>Москва, ул. Тверская 15</span>
+                <span>Бишкек, ул. Кулиева 69</span>
               </li>
             </ul>
           </div>
 
-          {/* Социальные сети - ИСПРАВЛЕНО */}
-          <div className="footer-social">
+          {/* Соцсети */}
+          <div className="footer-section">
             <h3 className="footer-title">Мы в соцсетях</h3>
-            <div className="social-links">
+            <div className="footer-social">
               <a href="#" className="social-link">Telegram</a>
               <a href="#" className="social-link">Instagram</a>
               <a href="#" className="social-link">Facebook</a>
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Нижняя часть футера */}
+        {/* Нижняя часть */}
         <div className="footer-bottom">
           <p className="copyright">© {currentYear} CarShare. Все права защищены.</p>
           <div className="payment-methods">
