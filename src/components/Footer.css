@@ -1,17 +1,224 @@
 .footer {
-  background: #1a1a1a;
-  color: white;
-  padding: 20px 0;
-  margin-top: auto;
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 60px 0 30px;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+  width: 100%;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+/* Бренд */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.logo-icon {
+  font-size: 32px;
+  color: #ffd700;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-description {
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Заголовки */
+.footer-title {
+  color: #ffd700;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #ffd700;
+}
+
+/* Списки */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffd700;
+}
+
+/* Контакты - ИСПРАВЛЕНО */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.contact-icon {
+  font-size: 18px;
+  min-width: 24px;
+  color: #ffd700;
+}
+
+.contact-list a {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: #ffd700;
+}
+
+/* Социальные сети - ИСПРАВЛЕНО */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-link {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ffd700;
+}
+
+/* Нижняя часть */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
 }
 
 .copyright {
-  color: #b0b0b0;
-  text-align: center;
+  color: #666666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 20px;
+}
+
+.payment-methods span {
+  color: #666666;
+  font-size: 14px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .payment-methods {
+    justify-content: center;
+  }
+  
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-title {
+    text-align: center;
+  }
+  
+  .footer-links,
+  .social-links {
+    text-align: center;
+  }
+  
+  .contact-list li {
+    justify-content: center;
+  }
+  
+  .logo {
+    justify-content: center;
+  }
+  
+  .brand-description {
+    text-align: center;
+  }
 }
