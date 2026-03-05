@@ -1,0 +1,219 @@
+.car-manager {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .car-manager h2 {
+    color: #ffd700;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  /* Сообщения */
+  .message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .message.error {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+  }
+  
+  .message.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+  }
+  
+  /* Форма */
+  .car-form-container {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .car-form-container h3 {
+    color: #ffd700;
+    margin-bottom: 20px;
+  }
+  
+  .car-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group label {
+    color: #ffd700;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: #000000;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #666;
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .btn-submit,
+  .btn-cancel {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-submit {
+    background: #ffd700;
+    color: #000000;
+  }
+  
+  .btn-submit:hover:not(:disabled) {
+    background: #ffed4a;
+    transform: translateY(-2px);
+  }
+  
+  .btn-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .btn-cancel {
+    background: #333;
+    color: #ffffff;
+  }
+  
+  .btn-cancel:hover {
+    background: #444;
+  }
+  
+  /* Таблица автомобилей */
+  .cars-list h3 {
+    color: #ffd700;
+    margin-bottom: 20px;
+  }
+  
+  .cars-table {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table-header {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 80px 100px 100px;
+    background: #ffd700;
+    color: #000000;
+    font-weight: 600;
+    padding: 15px;
+  }
+  
+  .table-row {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 80px 100px 100px;
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+    align-items: center;
+  }
+  
+  .table-row:last-child {
+    border-bottom: none;
+  }
+  
+  .table-row:hover {
+    background: #2a2a2a;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-edit:hover {
+    background: #ffd700;
+    color: #000000;
+  }
+  
+  .btn-delete:hover {
+    background: #ff4444;
+    color: #ffffff;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 40px;
+    color: #ffd700;
+    font-size: 18px;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .table-header,
+    .table-row {
+      grid-template-columns: 40px 80px 80px 60px 80px 70px;
+      font-size: 14px;
+      gap: 5px;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,14 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import AdminPage from './pages/AdminPage';
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </div>
     </Router>

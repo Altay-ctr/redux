@@ -1,0 +1,18 @@
+.admin-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-page main {
+    flex: 1;
+    background: #000000;
+    padding: 40px 0;
+  }
+  
+  .admin-page h1 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
